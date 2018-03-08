@@ -18,30 +18,29 @@ interface ModelInterface extends DataInterface
     public function __construct(Container $app);
 
     public function connectContainer();
+    public function connectDatabases();
 
     /*************************************
-    * Connect Database
+    * Database
     *************************************/
-    public function connectDatabases();
     public function setIdField($fieldName = null);
     public function getIdField();
     public function setTable($table);
     public function getTable();
 
     /*************************************
-    * Use Database - Перенести в RouterDb
+    * DatabaseInterface
     *************************************/
     public function getFieldMap($table = null);
     public function fieldMap($table = null);
     public function tableSchema($table = null);
     public function getList(array $filters = [], $joinTables = null, $orderBy = null, $count = null, $offset = null);
-    public function getOne($id = null);
     public function getIdByAlias($alias);
-    /*************************************
-    * Steep Methods
-    *************************************/
+
     public function select();
     public function query($query);
+
+    public function getOne($id = null);
     public function save();
     public function delete();
 
@@ -84,11 +83,6 @@ interface ModelInterface extends DataInterface
     public function offsetExists($offset);
     public function offsetUnset($offset);
     public function offsetGet($offset);
-
-    /*************************************
-    * Countable Interface
-    *************************************/
-    public function count();
 
     /*************************************
     * ArrayIterator Interface

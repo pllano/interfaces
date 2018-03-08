@@ -21,7 +21,7 @@ interface ControllerInterface extends DataInterface
     public function get(Request $request, Response $response, array $args = []);
 
     public function post(Request $request, Response $response, array $args = []);
-	
+    
     /*************************************
     * Data Interface
     *************************************/

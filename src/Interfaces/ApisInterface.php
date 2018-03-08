@@ -1,5 +1,4 @@
-<?php
-/**
+<?php /**
  * Interfaces (https://pllano.com)
  *
  * @link https://github.com/pllano/interfaces
@@ -9,13 +8,14 @@
  */
 namespace Pllano\Interfaces;
 
-interface ApisInterface
+use Pllano\Interfaces\ApiInterface;
+
+interface ApisInterface extends ApiInterface
 {
-	public function apis(array $arr = [], string $type = null);
+    public function apis($data);
     public function setType(string $type = null);
     public function setCode(int $code = null);
     public function setMessage(string $message = null);
     public function setHttpCodes(string $httpCode = null);
-
 }
  

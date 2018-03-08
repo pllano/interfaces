@@ -14,10 +14,10 @@ interface RouterDbInterface
     public function __construct(array $config = [], string $adapter = null, string $driver = null, string $dbName = null, string $prefix = null, string $namespace = null);
 
     public function ping(string $resource = null);
-	public function run(string $dbName = null, array $options = [], string $prefix = null);
+    public function run(string $dbName = null, array $options = [], string $prefix = null);
 
-	public function setConfig(array $config = [], string $adapter = null, string $driver = null, string $dbName = null, string $prefix = null, string $namespace = null);
-	public function getConfig();
+    public function setConfig(array $config = [], string $adapter = null, string $driver = null, string $dbName = null, string $prefix = null, string $namespace = null);
+    public function getConfig();
 
     public function setOptions(array $options = []);
     public function getOptions();
