@@ -10,7 +10,7 @@ namespace Pllano\Interfaces;
 
 interface ApiInterface
 {
-    public function __construct(array $config = [], array $options = [], string $format = null, string $prefix = null, $other_base = null);
+    public function __construct(array $config = [], string $database = null, array $options = [], string $format = null, string $prefix = null, $other_base = null);
     public function ping(string $resource = null);
     public function get(string $resource = null, array $query = [], int $id = null, string $field_id = null);
     public function search(string $resource = null, array $query = [], string $keyword = null, string $field_id = null);
