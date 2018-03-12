@@ -10,15 +10,14 @@ namespace Pllano\Interfaces;
 
 interface ApiInterface
 {
-    public function __construct(array $config = [], array $options = [], string $prefix = null, $other_base = null);
-    public function api($data);
+    public function __construct(array $config = [], array $options = [], string $format = null, string $prefix = null, $other_base = null);
     public function ping(string $resource = null);
     public function get(string $resource = null, array $query = [], int $id = null, string $field_id = null);
-    public function search(string $resource = null, string $keyword = null, array $query = [], string $field_id = null);
+    public function search(string $resource = null, array $query = [], string $keyword = null, string $field_id = null);
     public function post(string $resource = null, array $query = [], string $field_id = null);
     public function put(string $resource = null, array $query = [], int $id = null, string $field_id = null);
     public function patch(string $resource = null, array $query = [], int $id = null, string $field_id = null);
-    public function delete(string $resource = null, array $query = [], int $id = null, string $field_id = null);
+    public function delete(string $resource = null, int $id = null, string $field_id = null);
     public function count(string $resource = null, array $query = [], int $id = null, string $field_id = null);
 }
  

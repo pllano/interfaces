@@ -11,19 +11,19 @@ namespace Pllano\Interfaces;
 
 interface RouterDbInterface
 {
-    public function __construct(array $config = [], string $adapter = null, string $driver = null, string $dbName = null, string $prefix = null, string $namespace = null);
+    public function __construct(array $config = [], string $adapter = null, string $driver = null, string $format = null);
 
-    public function ping(string $resource = null);
-    public function run(string $dbName = null, array $options = [], string $prefix = null);
+    public function run($database = null, array $options = []);
+    public function ping($resource = null, $prefix = null, $other_base = null);
 
-    public function setConfig(array $config = [], string $adapter = null, string $driver = null, string $dbName = null, string $prefix = null, string $namespace = null);
+    public function setConfig(array $config = [], string $adapter = null, string $driver = null, string $format = null);
     public function getConfig();
 
     public function setOptions(array $options = []);
     public function getOptions();
 
-    public function setDb(string $dbName = null);
-    public function getDb();
+    public function setDatabase($database = null);
+    public function getDatabase();
 
     public function setNamespace(string $namespace = null);
     public function getNamespace();
@@ -37,9 +37,8 @@ interface RouterDbInterface
     public function setPrefix(string $prefix = null);
     public function getPrefix();
 
-    public function setMailer($mailer = null);
-
-    public function setLogger($logger = null);
+    //public function setMailer($mailer = null);
+    //public function setLogger($logger = null);
 
 }
  

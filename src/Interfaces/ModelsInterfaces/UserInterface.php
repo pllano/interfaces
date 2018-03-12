@@ -10,7 +10,7 @@ namespace Pllano\Interfaces\ModelsInterfaces;
 
 interface UserInterface
 {
-    public function run()
+    public function run();
 
 }
  

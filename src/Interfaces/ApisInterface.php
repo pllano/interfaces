@@ -12,10 +12,6 @@ use Pllano\Interfaces\ApiInterface;
 
 interface ApisInterface extends ApiInterface
 {
-    public function apis($data);
-    public function setType(string $type = null);
-    public function setCode(int $code = null);
-    public function setMessage(string $message = null);
-    public function setHttpCodes(string $httpCode = null);
+
 }
  

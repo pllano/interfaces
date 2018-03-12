@@ -23,9 +23,9 @@ interface ModelInterface extends DataInterface
     /*************************************
     * Database
     *************************************/
-    public function setIdField($fieldName = null);
+    public function setIdField($idField = null);
     public function getIdField();
-    public function setTable($table);
+    public function setTable($table = null);
     public function getTable();
 
     /*************************************
@@ -35,10 +35,7 @@ interface ModelInterface extends DataInterface
     public function fieldMap($table = null);
     public function tableSchema($table = null);
     public function getList(array $filters = [], $joinTables = null, $orderBy = null, $count = null, $offset = null);
-    public function getIdByAlias($alias);
-
-    public function select();
-    public function query($query);
+    public function getIdByAlias(string $alias = null);
 
     public function getOne($id = null);
     public function save();

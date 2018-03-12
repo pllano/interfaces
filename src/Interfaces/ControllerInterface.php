@@ -63,11 +63,6 @@ interface ControllerInterface extends DataInterface
     public function offsetGet($offset);
 
     /*************************************
-    * Countable Interface
-    *************************************/
-    public function count();
-
-    /*************************************
     * ArrayIterator Interface
     *************************************/
     public function getIterator();

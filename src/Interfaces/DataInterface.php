@@ -9,7 +9,7 @@
  */
 namespace Pllano\Interfaces;
 
-interface DataInterface extends \ArrayAccess, \Countable
+interface DataInterface extends \ArrayAccess
 {
 
     /*************************************
@@ -51,11 +51,6 @@ interface DataInterface extends \ArrayAccess, \Countable
     public function offsetExists($offset);
     public function offsetUnset($offset);
     public function offsetGet($offset);
-
-    /*************************************
-    * Countable Interface
-    *************************************/
-    public function count();
 
     /*************************************
     * ArrayIterator Interface

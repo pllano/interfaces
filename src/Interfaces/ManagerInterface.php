@@ -9,6 +9,7 @@
  */
 namespace Pllano\Interfaces;
 
+use Psr\Http\Message\{ServerRequestInterface as Request, ResponseInterface as Response};
 use Psr\Container\ContainerInterface as Container;
 
 interface ManagerInterface
