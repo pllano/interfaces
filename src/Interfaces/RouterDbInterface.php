@@ -25,7 +25,7 @@ interface RouterDbInterface
     public function setDatabase($database = null);
     public function getDatabase();
 
-    public function setNamespace(string $namespace = null);
+    public function setNamespace($namespace = null);
     public function getNamespace();
 
     public function setAdapter(string $adapter = null);
